@@ -20,9 +20,13 @@ fn main() {
 
     // f64 is double precision while f32 is single precision
 
+    println!("FLOATING POINTS");
+    println!("--------");
     println!("The values of x and y are {} and {}, respectively", x, y);
 
     // Numeric optionations
+    println!("NUMERIC OPERATORS");
+    println!("--------");
 
     // Addition
     let sum = 5 + 10;
@@ -44,9 +48,43 @@ fn main() {
     let remainder = 43 % 5;
     println!("The remainder is {}", remainder);
 
+
+
     // Boolean
+    println!("BOOLEANS");
+    println!("--------");
     let t = true;
     let f: bool = false; // explicit type annotation
 
-    println!("The two possible values for a boolean are {} and {}", t, f);
+    print!("The two possible values for a boolean are {} and {}", t, f);
+
+    println!("CHAR");
+    println!("--------");
+
+    // The char type is four bytes and Rust's most primitive alphabetic type
+    // Char literals are specified with single quotes as opposed to string
+    // Literals which use double quotes
+
+    let c = '';
+    let z = 'Ø';
+    let heart_eyed_cat = '😻';
+
+    println!("Some example chars: {}, {}, {}", c, z, heart_eyed_cat);
+
+    println!("COMPOUND TYPES");
+    println!("--------");
+
+    // Compound types canm group multiple values into one type. Rust has two 
+    // primitive compound types: tuples and arrays
+
+    // Tuples are declared by writing a comma-seoparated list of values inside parenths
+    // each position in the tuple has a type and the types of the different values
+    // in the tuple dont have to be the same
+
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+
+    let (x, y, z) = tup;
+
+    println!("the values in the tuple are {}, {}, and {}", x, y, z);
+
 }
