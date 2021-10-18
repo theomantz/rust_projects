@@ -23,7 +23,7 @@ fn main() {
     println!("FLOATING POINTS");
     println!("--------");
     println!("The values of x and y are {} and {}, respectively", x, y);
-
+    println!("");
     // Numeric optionations
     println!("NUMERIC OPERATORS");
     println!("--------");
@@ -49,15 +49,16 @@ fn main() {
     println!("The remainder is {}", remainder);
 
 
-
     // Boolean
+    println!("");
     println!("BOOLEANS");
     println!("--------");
     let t = true;
     let f: bool = false; // explicit type annotation
-
     print!("The two possible values for a boolean are {} and {}", t, f);
 
+
+    println!("");
     println!("CHAR");
     println!("--------");
 
@@ -68,9 +69,9 @@ fn main() {
     let c = '';
     let z = 'Ø';
     let heart_eyed_cat = '😻';
-
     println!("Some example chars: {}, {}, {}", c, z, heart_eyed_cat);
 
+    println!("");
     println!("COMPOUND TYPES");
     println!("--------");
 
@@ -87,4 +88,27 @@ fn main() {
 
     println!("the values in the tuple are {}, {}, and {}", x, y, z);
 
+    // In addition to destructuring we can access a tuple element directly
+    // by using a period (.) followed by an index
+
+    let x: (i32, f64, u8) = (500, 6.4, 1);
+
+    let five_hundred = x.0;
+
+    let six_point_four = x.1;
+
+    let one = x.2;
+
+    println!("The values of the tuple are {}, {}, and {}", five_hundred, six_point_four, one);
+
+    // Another way to have a collection of multiple values is to have an array
+    // unlike a tuple, an array must have values of the same type
+    // Arrays are written as a comma-separated list within square brackets
+
+    let a = [1, 2, 3, 4, 5];
+
+    // An array is static in size while a vector can grow and shrink as needed
+    // if you are unsure of which type to use, use a vector
+
+    
 }
