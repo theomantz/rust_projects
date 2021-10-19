@@ -143,4 +143,16 @@ fn main() {
     let a = [3; 5];
 
     println!("This is the array of 5 elements, all the number 3: {:?}", a);
+
+    // An array is a single chunk of memory allocated on the stack. You can 
+    // access elements of an array using indexing, like this:
+
+    let a = [1, 2, 3, 4, 5];
+
+    let first = a[0];
+    let second = a[1];
+
+    println!("The first element of the array is {} and the second is {}", first, second);
+
+    
 }
