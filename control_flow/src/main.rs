@@ -44,6 +44,19 @@ fn main() {
 
     if_and_let(true);
 
+    // blocks of code evaluate to the last expression in them, and numbers are also
+    // expressions
+    // values that have the potential to be results from reach arm of the `if` expression
+    // must be of the same type
+
+    // The following function shows that when types are mismatched, we get an error
+
+    // if_mismatched_types(5, "six");
+
+    // Repetition with Loops
+
+    // Rust provides several loops. A loop runs throuigh the code inside the loop body
+    // to the end then starts immediately back at the beginning. 
 }
 
 fn if_else(x: i32, y: i32) {
@@ -78,3 +91,11 @@ fn if_and_let(cond: bool) {
 
     println!("The value of number is: {}", number);
 }
+
+// fn if_mismatched_types(x: i32, y: String) {
+//     let condition = true;
+
+//     let number = if condition { x } else { y };
+
+//     println!("The value of the number is: {}", number);
+// }
