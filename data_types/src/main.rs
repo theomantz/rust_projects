@@ -74,6 +74,7 @@ fn main() {
     println!("");
     println!("COMPOUND TYPES");
     println!("--------");
+    println!("The Tuple Type");
 
     // Compound types canm group multiple values into one type. Rust has two 
     // primitive compound types: tuples and arrays
@@ -107,8 +108,39 @@ fn main() {
 
     let a = [1, 2, 3, 4, 5];
 
+    // Arrays are useful when you want your data to be allocated on the stack 
+    // than the heap. 
+
     // An array is static in size while a vector can grow and shrink as needed
     // if you are unsure of which type to use, use a vector
 
-    
+    // An example of a good use of an array over a vector is a program that 
+    // needs to know the names of the months of the year. We will likely not need
+    // to add or remove months so you can safely use an array
+
+    let months = ["January", "February", "March", "April", "May", "June", "July", 
+                    "August", "September", "October", "November", "December"];
+
+    println!("The first array of integers a is: {:?}", a);
+
+    println!("The months of the year are: {:#?}", months);
+
+    // You would write an arrays type by using square brackets, and within the 
+    // brackets include the type of each element, a semicolon, and then the number of 
+    // elements in the array:
+
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+
+    println!("This is the type annotated array: {:?}", a);
+
+    // i32 is unsigned 32 bit. 5 is the number of elements in the array.
+
+    // You can also initialize an array with similar syntax. If you want to create
+    // an array that contains the same value for each element, you can specify 
+    // the initial value, followed by a semicolon and then the length of the array
+    // in square brackets as shown here.
+
+    let a = [3; 5];
+
+    println!("This is the array of 5 elements, all the number 3: {:?}", a);
 }
